@@ -1,6 +1,9 @@
 require 'selenium-webdriver'
 require 'test-unit'
 
+Selenium::WebDriver.logger.level = :debug
+Selenium::WebDriver.logger.output = 'selenium.log'
+
 class SafariTest < Test::Unit::TestCase
   def setup
     options = Selenium::WebDriver::Options.safari
